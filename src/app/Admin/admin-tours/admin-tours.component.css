@@ -1,0 +1,153 @@
+/* 
+  .custom-btn-update {
+    background-color: #ff69b4; 
+    border-color: #ff69b4;
+    color: white;
+  }
+  
+  .container {
+    margin-top: 80px;
+  }
+  
+  .card {
+    height: 450px; 
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-body {
+    background-color: blanchedalmond; 
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 10px; 
+  }
+  
+  .card-img-top {
+    height: 190px; 
+    object-fit: cover; 
+  }
+  
+  .card-title {
+    font-size: 16px; 
+    margin-bottom: 5px; 
+  }
+  
+  .card-text {
+    font-size: 12px; 
+    margin-bottom: 5px; 
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: auto; 
+  }
+  
+  .custom-btn {
+    flex: 1; 
+    margin-right: 5px; 
+    font-size: 12px; 
+  }
+  
+  .custom-btn:last-child {
+    margin-right: 0; 
+  }
+  
+  .custom-btn-add,
+  .custom-btn-get,
+  .custom-btn-delete,
+  .custom-btn-update {
+    background-color: #ff69b4; 
+    border-color: #ff69b4;
+    color: white;
+  }
+
+   */
+
+
+
+   .container {
+    margin-top: 80px;
+  }
+  
+  .card {
+    height: 450px; /* Set a fixed height for uniform size */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-body {
+    background-color: blanchedalmond; 
+    flex: 1; /* Ensure card body takes up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out the elements */
+    padding: 10px; /* Adjust padding for better fit */
+  }
+  
+  .card-img-top {
+    height: 190px; /* Set a fixed height for images */
+    object-fit: cover; /* Ensure image fits within the defined height */
+  }
+  
+  .card-title {
+    font-size: 16px; /* Adjust title size */
+    margin-bottom: 5px; /* Reduce bottom margin */
+  }
+  
+  .card-text {
+    font-size: 12px; /* Adjust text size */
+    margin-bottom: 5px; /* Reduce bottom margin */
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between; /* Distribute buttons evenly */
+    margin-top: auto; /* Push the button container to the bottom */
+  }
+  
+  .custom-btn {
+    flex: 1; /* Allow buttons to take equal space */
+    margin-right: 5px; /* Add some space between buttons */
+    font-size: 12px; /* Adjust font size for better fit */
+  }
+  
+  .custom-btn:last-child {
+    margin-right: 0; /* Remove the right margin from the last button */
+  }
+  
+  .custom-btn-add,
+  .custom-btn-get,
+  .custom-btn-delete,
+  .custom-btn-update {
+    background-color: #ff69b4; 
+    border-color: #ff69b4;
+    color: white;
+  }
+  
+  /* Pagination styles */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .pagination button:hover {
+    background-color: #ff1493;
+  }
+  
+  .pagination button.active {
+    background-color: #ff1493;
+  }
+  

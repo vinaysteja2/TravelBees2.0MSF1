@@ -1,0 +1,73 @@
+
+.main-cont{
+  padding-top: 60px;
+}
+   .booking-history {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    
+  }
+  
+  .booking-history h2 {
+    margin-bottom: 20px;
+  }
+  
+  .booking-history table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .booking-history th, .booking-history td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .booking-history th {
+    background-color: #f2f2f2;
+  }
+  
+  .booking-history tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .booking-history .payment-status-btn {
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px;
+  }
+  
+  .booking-history .btn-success {
+    background-color: green;
+    color: white;
+  }
+  
+  .booking-history .btn-danger {
+    background-color: red;
+    color: white;
+  }
+  
+  .booking-history .cancel-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .booking-history .btn-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  .booking-history .details-btn {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  

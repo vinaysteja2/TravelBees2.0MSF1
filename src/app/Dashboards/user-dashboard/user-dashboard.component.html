@@ -1,0 +1,31 @@
+
+
+
+ <nav class="navbar navbar-expand-sm bg-pink navbar-dark">
+  <h1 class="navbar-brand" ><i class="fa-solid fa-earth-americas" style="margin-right: 6px; margin-left: 20px;"></i>TravelBees</h1>
+  <ul class="navbar-nav navbar-right">
+    <li class="nav-item custom-nav-item" *ngIf="!authService.isLoggedIn()">
+      <a class="nav-link" routerLink="/home" routerLinkActive="active"><i class="fa-solid fa-house" style="margin-right: 6px; margin-left: 20px;"></i>Home</a>
+    </li>
+    <li class="nav-item custom-nav-item" *ngIf="!authService.isLoggedIn()">
+      <a class="nav-link" routerLink="/user-registration/userRegister" routerLinkActive="active"><i class="fa-solid fa-registered" style="margin-right: 6px; margin-left: 20px;"></i>User Register</a>
+    </li>
+    <li class="nav-item custom-nav-item" *ngIf="!authService.isLoggedIn()">
+      <a class="nav-link" routerLink="/user-registration/userLogin" routerLinkActive="active"><i class="fa-solid fa-right-to-bracket" style="margin-right: 6px; margin-left: 20px;"></i>Login</a>
+    </li>
+    <li class="nav-item custom-nav-item" *ngIf="authService.isLoggedIn()">
+      <a class="nav-link" routerLink="/user-registration/bookingHistory" routerLinkActive="active"><i class="fa-solid fa-clock-rotate-left"  style="margin-right: 6px; margin-left: 20px;"></i>Booking History</a>
+    </li>
+    <li class="nav-item custom-nav-item" *ngIf="authService.isLoggedIn()">
+      <a class="nav-link" routerLink="/user-registration/selectPlace" routerLinkActive="active"><i class="fas fa-search" style="margin-right: 6px; margin-left: 20px;"></i>Search Place</a>
+    </li>
+    <!-- <li class="nav-item custom-nav-item" *ngIf="authService.isLoggedIn()">
+      <a class="nav-link" (click)="logout()">Logout</a>
+    </li> -->
+    <li class="nav-item custom-nav-item" *ngIf="authService.isLoggedIn()">
+      <a class="nav-link" (click)="openProfile()"><i class="fa-solid fa-circle-user" style="margin-right: 6px; margin-left: 20px;"></i>Profile</a>
+    </li>
+  </ul>
+</nav>
+<app-user-profile #profileComponent></app-user-profile>
+<router-outlet></router-outlet>

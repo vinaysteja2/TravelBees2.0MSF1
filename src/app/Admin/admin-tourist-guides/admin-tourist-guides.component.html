@@ -1,0 +1,71 @@
+<!-- 
+
+   <div class="container">
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let guide of touristGuides">
+        <div class="card mb-3">
+          <img *ngIf="guide.photo" [src]="guide.photo" alt="Tourist Guide Photo" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{ guide.name }}</h5>
+            <p class="card-text"><strong>Location:</strong> {{ guide.location }}</p>
+            <p class="card-text"><strong>Languages:</strong> {{ guide.languages?.join(', ') }}</p>
+            <p class="card-text"><strong>Description:</strong> {{ guide.description }}</p>
+            <p class="card-text"><strong>Email:</strong> {{ guide.email }}</p>
+            <p class="card-text"><strong>Average Rating:</strong> {{ guide.averageRating }}</p>
+            <p class="card-text"><strong>Contact Number:</strong> {{ guide.contactNumber }}</p>
+            <p class="card-text"><strong>Aadhar Number:</strong> {{ guide.aadharNumber }}</p>
+  
+        
+            <div class="button-container">
+              <button type="button" class="btn custom-btn custom-btn-update" (click)="navigateToUpdate(guide.id)">UPDATE</button>
+              <button class="btn custom-btn custom-btn-add" (click)="navigateToAddTours(guide.id)">ADD TOUR</button>
+              <button class="btn custom-btn custom-btn-get" (click)="navigateToGetToursByTouristGuideId(guide.id)">TOURS</button>
+              <button type="button" class="btn custom-btn custom-btn-delete" (click)="guide.id !== undefined && deleteTouristGuide(guide.id)">DELETE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+   -->
+<!-- ------------------------------with pagination----------------------------- -->
+   <div class="container">
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let guide of touristGuides | paginate: pageSize : currentPage">
+        <div class="card mb-3">
+          <img *ngIf="guide.photo" [src]="guide.photo" alt="Tourist Guide Photo" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{ guide.name }}</h5>
+            <p class="card-text"><strong>Location:</strong> {{ guide.location }}</p>
+            <p class="card-text"><strong>Languages:</strong> {{ guide.languages?.join(', ') }}</p>
+            <p class="card-text"><strong>Description:</strong> {{ guide.description }}</p>
+            <p class="card-text"><strong>Email:</strong> {{ guide.email }}</p>
+            <p class="card-text"><strong>Average Rating:</strong> {{ guide.averageRating }}</p>
+            <p class="card-text"><strong>Contact Number:</strong> {{ guide.contactNumber }}</p>
+            <p class="card-text"><strong>Aadhar Number:</strong> {{ guide.aadharNumber }}</p>
+  
+            <!-- Button container -->
+            <div class="button-container">
+              <button type="button" class="btn custom-btn custom-btn-update" (click)="navigateToUpdate(guide.id)">UPDATE</button>
+              <button class="btn custom-btn custom-btn-add" (click)="navigateToAddTours(guide.id)">ADD TOUR</button>
+              <button class="btn custom-btn custom-btn-get" (click)="navigateToGetToursByTouristGuideId(guide.id)">TOURS</button>
+              <button type="button" class="btn custom-btn custom-btn-delete" (click)="guide.id !== undefined && deleteTouristGuide(guide.id)">DELETE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Pagination controls -->
+    <div class="pagination">
+      <button *ngFor="let page of totalPages" 
+              (click)="changePage(page)" 
+              [class.active]="currentPage === page">
+        {{ page }}
+      </button>
+    </div>
+  </div>
+  
+  <router-outlet></router-outlet>
+  

@@ -1,0 +1,45 @@
+
+
+<div class="navbar">
+   
+    <h1 class="navbar-brand" ><i class="fa-solid fa-earth-americas" style="margin-right: 6px; margin-left: 20px;"></i>TravelBees</h1>
+        <button routerLink="/home"><i class="fa-solid fa-house" style="margin-right: 6px; margin-left: 20px;"></i>Home</button>
+        <button routerLink="/admin-registration"><i class="fa-solid fa-user-tie"  style="margin-right: 6px; margin-left: 20px;"></i>Admin-Portal</button>
+        <button routerLink="/user-registration"><i class="fa-solid fa-user" style="margin-right: 6px; margin-left: 20px;"></i>User-Portal</button>
+        <button routerLink="/aboutus" ><i class="fa fa-info-circle"  style="margin-right: 6px; margin-left: 20px;"></i>About Us </button>
+        
+<!-- <button routerLink="/contactus"><i class="fa-solid fa-envelope" style="margin-right: 6px; margin-left: 20px;"></i>Contact Us</button> -->
+<!-- <button routerLink="/bookingHistory">History</button> -->
+<!-- <button mat-button (click)="profile.openProfile()">Profile</button>
+<app-pdf-generation #profile [user]="user"></app-pdf-generation> -->
+</div>
+
+  
+  
+<div class="content">
+    <div class="image-container">
+        <img src="assets/R.png" alt="Main Image">
+        <div class="text-overlay">TravelBees</div>
+        <div class="swiper-container-wrapper">
+            <swiper-container class="mySwiper" pagination="true" navigation="true" space-between="50"
+                centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false" slides-per-view="2">
+                <swiper-slide><img src="assets/wp4069461.webp" alt="Slide 1"></swiper-slide>
+                <swiper-slide><img src="assets/Sydney-Harbour-Bridge-in-the-early-morning-light.webp" alt="Slide 2"></swiper-slide>
+                <swiper-slide><img src="assets/wp4069461.webp" alt="Slide 3"></swiper-slide>
+                <swiper-slide><img src="assets/R.png" alt="Slide 4"></swiper-slide>
+                <swiper-slide><img src="assets/OIP.jpg" alt="Slide 5"></swiper-slide>
+                <swiper-slide><img src="assets/OIP (2).jpg" alt="Slide 6"></swiper-slide>
+                <swiper-slide><img src="assets/OIP (1).jpg" alt="Slide 7"></swiper-slide>
+                <swiper-slide><img src="assets/1503617-vertical-desktop-wallpaper-travel-1920x1080-hd-1080p.jpg" alt="Slide 8"></swiper-slide>
+                <swiper-slide><img src="assets/wp4069461.webp" alt="Slide 9"></swiper-slide>
+                <div class="autoplay-progress" slot="container-end">
+                    <svg viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                    </svg>
+                    <span></span>
+                </div>
+            </swiper-container>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

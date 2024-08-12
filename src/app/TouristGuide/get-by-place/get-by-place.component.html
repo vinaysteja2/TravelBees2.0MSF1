@@ -1,0 +1,65 @@
+
+<div class="main-container">
+    <body>
+     <div class="swiper-container-wrapper">
+    <swiper-container class="mySwiper" slides-per-view="3" centered-slides="true" space-between="30" pagination="true"
+       pagination-type="fraction" navigation="true">
+     
+       <swiper-slide *ngFor="let guide of touristGuides">
+          <div class="swiper-slide-padding"> 
+   
+         <div class="slide-content">
+         <img *ngIf="guide.photo" [src]="guide.photo" alt="Tourist Guide Photo">
+         <div class="details">
+           <P class="namaste">Namaste I am</P>
+           <p class="name">{{ guide.name }}</p>
+           <p class="languages"><strong>I speak :</strong> {{ guide.languages?.join(', ') }}</p>
+           <p class="rating"><strong>Rating :</strong> {{ guide.averageRating }}</p>
+            <button class="about-button" (click)="navigateToGetToursByTouristGuideId(guide.id)">About me</button>
+         </div>
+       </div>
+          </div> 
+       </swiper-slide>
+       
+     </swiper-container>
+     
+     </div>
+   </body> 
+   
+   <div class="pink-line">
+     <div class="row">
+       <div class="column">
+         <div class="paragraph-container">
+           <p class="p1">Withlocals experience</p>
+           <p>are always</p>
+         </div>
+       </div>
+       <div class="column">
+         <div class="paragraph-container">
+           <p class="p2">private & personalizes</p>
+           <p class="p3">No strangers,just you.Fully<br>
+           customize your trip to your needs.</p>
+         </div>
+       </div>
+       <div class="column">
+         <div class="paragraph-container">
+           <p class="p2">With a local expert</p>
+           <p class="p3">From historical facts to the most<br>
+           up-to-date health regulations.</p>
+         </div>
+       </div>
+     
+     <div class="column">
+       
+       <div class="paragraph-container">
+         <p class="p2">Without the crowds</p>
+         <p class="p3">Experience designed to take you<br>
+         away from the crowds towards<br>
+         authentication local sports.</p>
+     </div>
+     </div>
+   </div>
+     
+   </div>
+   </div>
+  

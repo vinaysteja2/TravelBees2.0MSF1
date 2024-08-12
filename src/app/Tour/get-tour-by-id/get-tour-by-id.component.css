@@ -1,0 +1,219 @@
+.main-cont{
+  padding-top: 30px;
+}
+.tour-container {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; /* Center the content vertically */
+    padding-top: 30px;
+    width: 1000px;
+    
+}
+
+.image-details-box {
+    border: 0px solid #ccc;
+    padding: 5px; 
+    display: flex;
+    flex-direction: column;
+     max-width:1400px;
+     margin-left:60px; 
+    
+}
+
+.image-container {
+    width: 100%; 
+    margin-bottom: 20px; 
+  
+}
+
+.photo {
+    width: 850px;
+    height: 600px;
+    
+    border-radius: 10px;
+}
+
+.details-container {
+    width: 100%; 
+}
+.p1{
+    font-size: 50px;
+    color: #282525cb;
+    font-weight: bold;
+}
+
+.aboutme{
+    font-size: 40px; 
+    color: rgb(27, 22, 25);
+    font-weight: 600;
+  
+}
+.namaste{
+    font-size: 40px; 
+    color: rgb(27, 22, 25);
+    font-weight: 700;
+  
+
+}
+
+.black-line {
+    border: 0;
+    border-top: 2px solid black; 
+    margin-top: 10px;
+  }
+  .btn {
+    width: 100%; 
+  }
+
+  /* ----------------extras---------------------------------------------- */
+  .extras {
+    display: flex;
+    flex-direction: column;
+    padding-right: 500px;
+    padding-top: 50px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%; /* Adjust the width to fit three items per row */
+  }
+  
+  .item i {
+    font-size: 24px; /* Adjust the icon size */
+  }
+  .black-line1 {
+    border: 0;
+    border-top: 2px solid black; /* Specify the thickness and color of the line */
+    margin-top: 10px; /* Adjust the margin as needed */
+    width: 120%;
+    margin-left: 50px;
+  }
+
+  /* --------------------reviews------------------------- */
+
+  .reviews-container {
+    padding: 20px;
+    padding-left: 50px;
+  }
+  
+  .review-items {
+    margin-top: 20px; /* Add margin to separate each review */
+  }
+  
+  .review-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    padding: 20px;
+    margin-bottom: 20px; /* Add margin to separate each review */
+  }
+  
+  .review-content {
+    /* Additional styling for review content if needed */
+  }
+  /* ------------------scroll--------------- */
+  /* .text-box img {
+   width: 118%; 
+    height: 100%; 
+   
+    border-radius: 10px;
+    opacity: 0.5;
+}  */
+
+    .text-box {
+    width: 450px; 
+    height: 1100px;
+    padding-left: 100px;
+    margin-top: 135px;
+    margin-left: 1000px;
+    margin-right: -190px;
+    background-color:white;
+    box-shadow: 00px 0px 10px rgba(12, 11, 11, 0.5); 
+    position: absolute; 
+    right: 200px; 
+    top: 20px; 
+    border-radius: 10px;
+    display: flex; 
+    flex-direction: column; 
+     align-items: flex-end;  
+   }
+   .text-box form {
+    margin-top: 60px;
+    width: 80%; 
+    margin-right: 20px; 
+}
+
+.text-box form input {
+    width: 400px ;
+    height: 70px;
+    margin-top:100px ;
+    /* margin-right: 600px; */
+    border: 3px solid rgb(241, 15, 136);
+    border-radius: 10px;
+    margin-left: -140px;
+}
+
+
+.text-box form button {
+    width: 400px; 
+    height: 70px;
+    margin-top:100px;
+    margin-left: -140px;
+    
+    color:white;
+    background-color: rgb(241, 15, 136);
+    border-radius: 40px;
+    font-weight: bolder;
+    font-size: 20px;
+    border: rgb(241, 15, 136);
+}
+
+.text-box p {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 20px; 
+    margin-right: 50px;
+    white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Hide overflowing content */
+    text-overflow: ellipsis; /* Display ellipsis (...) for overflowed content */
+}
+ /* .hp1{
+    margin-right: 160px;
+ } */
+.stars {
+    color: rgb(243, 10, 142); /* Adjust star color */
+margin-right: -10px;
+}
+/* ------------------book tours--------------- */
+.text-box .p2{
+margin-right: 80px;
+}
+/* ------------------add coments------------- */
+.review-form textarea {
+  width: 1300px;
+  height: 110px; /* Adjust the height as needed */
+  resize: vertical; /* Allow vertical resizing */
+  margin-left: 30px;
+  
+}
+
+.review-form input[type="number"] {
+  width: 100px; /* Adjust the width as needed */
+  margin-left: 30px;
+}
+
+.review-form button[type="submit"] {
+  margin-top:10px;
+  padding: 10px 20px; /* Adjust the padding as needed */
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-left: 30px;
+}

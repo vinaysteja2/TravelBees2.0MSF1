@@ -1,0 +1,63 @@
+
+<div class="main-cont">
+<div class="container">
+  <div class="header">
+    <h1>Booking Details</h1>
+    <button class="generate-pdf-button" (click)="generatePDF()">Generate PDF</button>
+  </div>
+
+  <div id="booking-details-content">
+    <div class="section">
+      <h2>Booking Information</h2>
+      <div class="grid-container">
+        <div class="grid-item"><strong>Username:</strong> {{ user?.username }}</div>
+        <div class="grid-item"><strong>Email:</strong> {{ user?.email }}</div>
+        <div class="grid-item"><strong>Mobile Number:</strong> {{ user?.mobileNo }}</div>
+        
+        <div class="grid-item"><strong>Booking Date:</strong> {{ booking?.bookingDate }}</div>
+        <div class="grid-item"><strong>Number of Persons:</strong> {{ booking?.numberOfPersons }}</div>
+        <div class="grid-item"><strong>Payment Status:</strong> {{ booking?.paymentStatus ? 'Paid' : 'Pending' }}</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Tour Information</h2>
+      <div class="flex-container">
+        <div class="photo">
+          <img [src]="booking?.tour?.tourPhoto" alt="Tour Photo">
+        </div>
+        <div class="data">
+          <p class="p1"><strong>Tour Name:</strong> {{ booking?.tour?.name }}</p>
+          <p class="p1"><strong>Duration:</strong> {{ booking?.tour?.duration }} days</p>
+          <p class="p1"><strong>Price:</strong> ${{ booking?.tour?.price }}</p>
+          <p class="p1"><strong>Description:</strong> {{ booking?.tour?.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Tourist Guide Information</h2>
+      <div class="flex-container">
+        <div class="photo">
+          <img [src]="touristGuide?.photo" alt="Tourist Guide Photo">
+        </div>
+        <div class="data">
+          <p class="p2"><strong>Name:</strong> {{ touristGuide?.name }}</p>
+          <p class="p2"><strong>Email:</strong> {{ touristGuide?.email }}</p>
+          <p class="p2"><strong>Contact Number:</strong> {{ touristGuide?.contactNumber }}</p>
+          <p class="p2"><strong>Languages:</strong> {{ touristGuide?.languages?.join(', ') }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Payment Information</h2>
+      <div class="grid-container">
+        <p class="grid-item"><strong>Payment Date:</strong> {{ payment?.paymentDate }}</p>
+        <p class="grid-item"><strong>Payment Mode:</strong> {{ payment?.paymentMode }}</p>
+        <p class="grid-item"><strong>Total Price:</strong> ${{ payment?.totalPrice }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

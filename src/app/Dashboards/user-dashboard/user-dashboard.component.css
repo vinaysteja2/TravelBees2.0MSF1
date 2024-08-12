@@ -1,0 +1,37 @@
+.bg-pink {
+    
+    background-color:pink;
+}
+
+  a
+  {
+     color: black;
+  }
+  
+  .navbar-right {
+    margin-left: auto;
+  }
+  
+  .custom-nav-item {
+    margin-right: 45px; 
+  }
+  .navbar-nav .nav-item .nav-link {
+    color: black; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .navbar-nav .nav-item .nav-link:hover {
+    background-color: white; 
+    color: black; /* Text color on hover */
+    border-radius: 5px;
+  }
+ 
+  .navbar {
+    background-color: pink;
+    position: fixed; /* Make the navbar fixed */
+     top: 0;  
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensure it is above other content */
+   
+}
+  

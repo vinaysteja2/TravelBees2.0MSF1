@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Update Tour</h2>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  <form [formGroup]="tourForm" (ngSubmit)="updateTour()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" formControlName="description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="number" id="price" formControlName="price" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="duration">Duration:</label>
+      <input type="number" id="duration" formControlName="duration" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="smallDescription">Small Description:</label>
+      <textarea id="smallDescription" formControlName="smallDescription" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="averageRating">Average Rating:</label>
+      <input type="number" id="averageRating" formControlName="averageRating" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label for="tourPhoto">Tour Photo:</label>
+      <input type="file" id="tourPhoto" (change)="onPhotoSelected($event)" class="form-control" />
+      <img *ngIf="photoPreview" [src]="photoPreview" alt="Preview" class="preview-image" />
+    </div>
+    <button type="submit" class="btn  custom-btn-update">Update Tour</button>
+  </form>
+</div>

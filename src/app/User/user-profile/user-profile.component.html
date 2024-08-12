@@ -1,0 +1,29 @@
+<!-- <div class="profile-box" *ngIf="isVisible">
+    <div class="header">
+      <h2>User Profile</h2>
+      <button (click)="closeProfile()">Close</button>
+    </div>
+    <div class="content">
+      <p><strong>Username:</strong> {{ user?.username }}</p>
+      <p><strong>Email:</strong> {{ user?.email }}</p>
+      <p><strong>Mobile Number:</strong> {{ user?.mobileNo }}</p>
+    </div>
+  </div>
+   -->
+
+   <div class="profile-box" *ngIf="isVisible">
+    <div class="header">
+      <h2><i class="fa-solid fa-user" style="margin-right: 6px; margin-left: 20px;"></i>Profile</h2>
+      <!-- <button class="close-btn" (click)="closeProfile()">Close</button> -->
+    </div>
+    <div class="content">
+      <p><strong>Username:</strong> {{ user?.username }}</p>
+      <p><strong>Email:</strong> {{ user?.email }}</p>
+      <p><strong>Mobile Number:</strong> {{ user?.mobileNo }}</p>
+    </div>
+    <div class="button-container">
+      <button class="logout-btn" (click)="logout()">Logout</button>
+      <button class="cancel-btn" (click)="closeProfile()">Cancel</button>
+    </div>
+  </div>
+  

@@ -1,0 +1,37 @@
+<div>
+    <nav class="navbar navbar-expand-sm bg-pink navbar-dark">
+      <h1 class="navbar-brand" ><i class="fa-solid fa-earth-americas" style="margin-right: 6px; margin-left: 20px;"></i>TravelBees</h1>
+      <ul class="navbar-nav navbar-right"> 
+        <li class="nav-item custom-nav-item" *ngIf="!authService.isLoggedIn()">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active"><i class="fa-solid fa-house" style="margin-right: 6px; margin-left: 20px;"></i>Home</a>
+        </li>
+        <li class="nav-item custom-nav-item" *ngIf="!authService.isLoggedIn()">
+          <a class="nav-link" routerLink="/admin-registration/adminRegister" routerLinkActive="active"><i class="fa-solid fa-registered" style="margin-right: 6px; margin-left: 20px;"></i>AdminRegister</a>
+        </li>
+        <li class="nav-item custom-nav-item" *ngIf="!authService.isLoggedIn()">
+          <a class="nav-link" routerLink="/admin-registration/userLogin" routerLinkActive="active"><i class="fa-solid fa-right-to-bracket" style="margin-right: 6px; margin-left: 20px;"></i>Login</a>
+        </li>
+        <!-- <li class="nav-item" *ngIf="!authService.isLoggedIn()">
+          <a class="nav-link" routerLink="/admin-registration/otpValidation" routerLinkActive="active">OTPValidation</a>
+        </li> -->
+        <li class="nav-item custom-nav-item" *ngIf="authService.isLoggedIn()">
+          <a class="nav-link" routerLink="/admin-registration/addTouristGuide" routerLinkActive="active"><i class="fa-solid fa-pen" style="margin-right: 6px; margin-left: 20px;"></i>AddTouristGuide</a>
+        </li>
+        <li class="nav-item" *ngIf="authService.isLoggedIn()">
+          <a class="nav-link" routerLink="/admin-registration/adminTouristGuides" routerLinkActive="active"><i class="fa-solid fa-users"  style="margin-right: 6px; margin-left: 20px;"></i>AdminTouristGuides</a>
+        </li>
+        <!-- <li class="nav-item custom-nav-item" *ngIf="authService.isLoggedIn()">
+          <a class="nav-link" (click)="Adminlogout()">Logout</a>
+        </li> -->
+        <li class="nav-item custom-nav-item" *ngIf="authService.isLoggedIn()">
+          <a class="nav-link" (click)="openProfile()"><i class="fa-solid fa-circle-user" style="margin-right: 6px; margin-left: 20px;"></i>Profile</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- <router-outlet></router-outlet> -->
+  <div class="content">
+    <app-user-profile #profileComponent></app-user-profile>
+    <router-outlet></router-outlet>
+</div>

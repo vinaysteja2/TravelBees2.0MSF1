@@ -1,0 +1,136 @@
+
+.main-container {
+  background-color: blanchedalmond;
+  padding-top: 50px;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ 
+}
+
+.box {
+  margin-top: -60px;
+  display: flex;
+  width: 750px;
+  height: 500px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.form {
+  flex: 0 0 35%;
+  padding: 20px;
+  padding-top: 10px;
+   width:130px ;
+  height:130px ; 
+  
+}
+
+.image {
+  flex: 0 0 85%;
+}
+
+.image img {
+  padding: 10px;
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-left: 40px;
+}
+
+.form div {
+  margin-bottom: 20px; 
+}
+
+.form label {
+  display: block; 
+  margin-bottom: 5px; 
+}
+
+.form input,
+.form select {
+  width: calc(100% - 10px); 
+  padding: 3px; 
+  /* margin-top: -40px; */
+   margin-bottom: -10px; 
+  border-radius: 5px;
+  width: 240px;
+  height: 40px;
+}
+
+.form button {
+  width: 200px;
+  height: 40px;
+  margin-left: 10px;
+  margin-top: -10px; 
+  border-radius: 40px;
+  background-color: rgba(236, 8, 99, 0.658);
+  border: white;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+small {
+  color: red; 
+  display: block; 
+  margin-top: 7px; 
+  margin-bottom: -20px;
+  margin-left: 10px;
+}
+
+.p1 {
+  margin-top: -2px;
+  margin-left: 10px;
+
+  font-size: 10px;
+}
+
+.p2 {
+  margin-top: 10px;
+  margin-left: 30px;
+  font-size: 10px;
+}
+
+.hp4 {
+  margin-top: 10px;
+  margin-left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgba(144, 9, 81, 0.658);
+}
+
+.hp2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(144, 9, 81, 0.658);
+  margin-top: -15px;
+  margin-left: 10px;
+}
+
+.hp3 {
+  padding-bottom: 5px;
+  
+  margin-top: -15px;
+  margin-bottom: -10px;
+  font-size: 10px;
+  margin-left: 10px;
+  text-align: left; 
+}
+
+.hp1 {
+  margin-left: -20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgba(144, 9, 81, 0.658);
+}
+
+/* ------------------------------------------------------- */

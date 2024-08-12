@@ -1,0 +1,132 @@
+<div class="main-cont">
+<div>
+    <div class="scroll">
+    <div class="tour-container">
+            
+      <div class="image-details-box">
+          <p class="p1">Hi there! Nice to meet you</p>
+          <div class="image-container">
+              
+              <img *ngIf="tour?.tourPhoto" [src]="tour.tourPhoto" alt="Tour Photo" class="photo">
+    
+          </div>
+          
+          <div class="details-container">
+              <p class="namaste">Highlights & Hidden Gems of {{ tour.name }}</p>
+              <hr class="black-line"> 
+              <div *ngIf="tour">
+                  <p>Name: {{ tour.name }}</p>
+                  <p>Price: {{ tour.price }}</p>
+                  <p>Duration: {{ tour.duration}}</p>
+                  <p>Average Rating: {{ tour.averageRating }}</p>
+                  <p>smallDescrption{{ tour.smallDescription }}</p>
+                  <hr class="black-line"> 
+                  <p class ="aboutme">About me</p>
+                  <p >{{ tour.description }}</p>
+                  <hr class="black-line"> 
+                  
+              </div>
+              <div *ngIf="!tour">
+                  <p>No tour data available.</p>
+              </div>
+          </div>
+      </div>
+      
+    </div>
+    
+    <!-- ------booking----- -->
+    <div class="text-box">
+    
+      <p class="hp1">INR {{ tour.price }} per person</p>
+      <p class="p2"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>&nbsp;{{reviewCount}} reviews</p>
+      <form [formGroup]="tourBookingForm" (ngSubmit)="bookTour()">
+        
+        <!-- <input type="date" id="bookingDate" formControlName="bookingDate"  placeholder="Booking Date"/>
+      -->
+     <input type="date" 
+               id="bookingDate" 
+               formControlName="bookingDate"  
+               placeholder="Booking Date"
+               [min]="minDate" />
+
+        
+        <input placeholder="Number of Persons" type="number" id="numberOfPersons" formControlName="numberOfPersons" />
+    
+        <button type="submit">Check Availability</button>
+      </form>
+    </div>
+    
+    </div>
+    <!-- -------extra------------- -->
+    
+    <div class="extras">
+      <div class="row">
+        <div class="item">
+          <i class="fas fa-map-marker-alt"></i>
+          <p>{{ tour.name }}</p>
+        </div>
+        <div class="item">
+          <i class="fas fa-city"></i>
+          <p>City highlight tour</p>
+        </div>
+        <div class="item">
+          <i class="fas fa-clock"></i>
+          <p>1 Day</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="item">
+          <i class="fas fa-walking"></i>
+          <p>Walking tour</p>
+        </div>
+        <div class="item">
+          <i class="fas fa-users-line"></i>
+          <p >Private tour. Only you and your host</p>
+        </div>
+        <div class="item">
+          <i class="fas fa-leaf"></i>
+          <p>Carbon Neutral</p>
+          
+        </div>
+        
+      </div>
+      <hr class="black-line1"> 
+    </div>
+    <!-- -------------------------reviews----------------------------------------- -->
+    
+    <div class="reviews-container">
+      <h3>Reviews </h3>
+      <div *ngIf="reviews.length > 0" class="review-items">
+        <div *ngFor="let review of reviews" class="review-item">
+          <div class="review-content">
+            <!-- <p>User ID: {{ review.userId }}</p> -->
+            <p><i class="fa-solid fa-user" style="margin-right: 6px; margin-left: 0px;"></i> {{ user.username }}</p>
+            <p>Comment: {{ review.comment }}</p>
+            <p>Rating: {{ review.rating }}</p>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="reviews.length === 0">
+        <p>No reviews found for this tour.</p>
+      </div>
+    </div>
+    </div>
+    
+    
+   <!-- ---------------review---------- -->
+    
+       <div>
+        <h2 style="margin-left: 30px;">Add Review to Tour</h2>
+        <form (submit)="addReview()" class="review-form">
+          <div>
+            <textarea id="comment" name="comment" [(ngModel)]="review.comment" required placeholder="Add comment..."></textarea>
+          </div>
+          <div>
+            <input type="number" id="rating" name="rating" [(ngModel)]="review.rating" min="1" max="5" required placeholder="Rating out of 5">
+          </div>
+          <button type="submit">Submit Review</button>
+        </form>
+        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      </div>
+      
+    </div>

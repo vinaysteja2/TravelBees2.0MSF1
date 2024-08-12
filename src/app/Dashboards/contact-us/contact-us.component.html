@@ -1,0 +1,70 @@
+
+<div class="navbar">
+  <h1 class="navbar-brand" ><i class="fa-solid fa-earth-americas" style="margin-right: 6px; margin-left: 20px;"></i>TravelBees</h1>
+        <button routerLink="/home"><i class="fa-solid fa-house" style="margin-right: 6px; margin-left: 20px;"></i>Home</button>
+        <button routerLink="/admin-registration"><i class="fa-solid fa-user-tie"  style="margin-right: 6px; margin-left: 20px;"></i>Admin-Portal</button>
+        <button routerLink="/user-registration"><i class="fa-solid fa-user" style="margin-right: 6px; margin-left: 20px;"></i>User-Portal</button>
+        <button routerLink="/aboutus" ><i class="fa fa-info-circle"  style="margin-right: 6px; margin-left: 20px;"></i>About Us </button>
+        <button routerLink="/contactus"><i class="fa-solid fa-envelope" style="margin-right: 6px; margin-left: 20px;"></i>Contact Us</button>
+</div>
+
+
+
+  <div class="contact-us-container">
+    <h1>Contact Us</h1>
+  
+    <div class="form-wrapper">
+      <form [formGroup]="form" (submit)="send()">
+        <div class="form-group">
+          <label for="name" class="form-label">Full Name</label>
+          <input
+            formControlName="from_name"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Full Name"
+            class="form-input"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-label">Email Address</label>
+          <input
+            formControlName="from_email"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            class="form-input"
+          />
+        </div>
+        <div class="form-group">
+          <label for="subject" class="form-label">Subject</label>
+          <input
+            formControlName="subject"
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="Enter your subject"
+            class="form-input"
+          />
+        </div>
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea
+            formControlName="message"
+            rows="6"
+            name="message"
+            id="message"
+            placeholder="Message"
+            class="form-input"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+    
+     

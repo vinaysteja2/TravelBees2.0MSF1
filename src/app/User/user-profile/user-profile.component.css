@@ -1,0 +1,73 @@
+/* .profile-box {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .content {
+    margin-top: 10px;
+  }
+   */
+
+   .profile-box {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .content {
+    margin-top: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .close-btn, .logout-btn, .cancel-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .close-btn {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  .logout-btn {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  .cancel-btn {
+    background-color: #eee;
+    color: #333;
+  }
+  

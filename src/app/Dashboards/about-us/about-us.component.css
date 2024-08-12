@@ -1,0 +1,133 @@
+/* .navbar {
+    background-color: pink;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    gap: 20px; 
+  }
+  
+  .navbar button {
+    
+    background-color: pink;
+    border:pink;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .navbar button:hover {
+    background-color: #f1f1f1;
+  } */
+  .navbar {
+    background-color: pink;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    position: fixed; /* Fixed position at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .navbar button {
+    background-color: transparent; /* Transparent background */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    color: #333; /* Text color */
+    margin-right: 20px; /* Adjust spacing between buttons */
+  }
+  
+  .navbar button:hover {
+    background-color: #f1f1f1; /* Light background on hover */
+  }
+  
+  
+  
+
+  .header {
+    background-color:white;
+    color: rgb(41, 37, 37);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.header h1 {
+    margin: 0;
+
+
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section {
+    background-color: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 60px;
+    height: 60px;
+}
+
+.team-member .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-member .info .name {
+    font-weight: bold;
+    color: #333;
+}
+
+.team-member .info .role {
+    color: #777;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+}
+
+.footer a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.navbar-brand {
+    color: white; 
+    padding-right: 340px; /* Optional: Adjust left margin if needed */
+  }

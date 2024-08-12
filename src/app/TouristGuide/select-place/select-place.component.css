@@ -1,0 +1,74 @@
+
+body {
+    background-color: blanchedalmond;
+    margin: 0;
+    padding: 0;
+    padding-top: 40px;
+
+  }
+  
+  .main-container {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .logo {
+    margin-top: 20px;
+    width: 550px;
+    height: 600px;
+    margin-right: 20px;
+    opacity: 0.8;
+  }
+  
+  .content {
+    flex: 1;
+  }
+  
+  .custom-dropdown {
+    width: 450px;
+    height: 65px;
+    margin-top: 50px;
+    margin-left: 30px;
+    font-size: 26px;
+    padding: 5px;
+    border-radius: 40px;
+  }
+  
+  .custom-button {
+    width: 200px;
+    height: 65px;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: rgb(238, 169, 7);
+    border-radius: 40px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .hp1 {
+    margin-top: 10px;
+    padding-left: 20px;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgba(144, 9, 81, 0.658);
+  }
+  
+  .hp2 {
+    padding-left: 20px;
+    padding-top: 80px;
+    font-size: 55px;
+    font-weight: bold;
+    color: rgba(144, 9, 81, 0.658);
+    margin-top: -40px;
+  }
+  
+  .hp3 {
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(17, 17, 17, 0.658);
+    margin-top: -10px;
+  }
+  

@@ -1,0 +1,119 @@
+
+.tour-details-container {
+    margin: 20px;
+    padding-top: 50px;
+  }
+  
+  .tour-details {
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Black shadow */
+    
+  }
+  
+  
+  .tour-details-body {
+    padding: 20px;
+  }
+  
+  .tour-details-info {
+    margin-bottom: 200px;
+    padding-left:30px;
+  }
+  
+  .tour-photo img {
+    width: 600px;
+    height: 500px;
+    border-radius: 20px;
+    margin-left: -100px;
+  }
+  
+  .p5{
+      
+    font-size: 35px;
+    font-weight: 30px;
+    padding-left: -10px;
+  }
+
+  .p1{
+    /* padding-left: 200px; */
+    font-size: 35px;
+    font-weight: 30px;
+  }
+
+  .p2{
+    font-size: 15px;
+    font-weight: 15px;
+  }
+
+  .p3{
+    font-size: 15px;
+    font-weight: 15px;
+  }
+  
+  .p4{
+    font-size: 15px;
+    font-weight: 15px;
+  }
+  .bp1{
+    font-size: 25px;
+    font-weight: 15px;
+  }
+  .bp2{
+    font-size: 25px;
+    font-weight: 15px;
+  }
+  .bp3{
+    margin-top: 40px;
+    width: 390px;
+    height:60px ;
+    font-weight: 15px;
+    background-color: rgb(210, 8, 106);
+    color: rgb(240, 234, 234);
+    border-radius: 30px;
+    font-size: 40px;
+    border: white;
+  }
+  /* --------------------extras------- */
+  .pink-line {
+    background-color: rgb(234, 19, 119);
+    height: 200px;
+    width: 100%;
+  }
+  
+  .row {
+    display: flex;
+    /* align-items: center;  */
+    padding-top: 1px;
+    padding-left: 100px;
+    /* margin-left: 50px; */
+  }
+  
+  .column {
+    flex: 1;
+  }
+  
+  .paragraph-container {
+    margin: 10px; /* Adjust margin as needed */
+  }
+  
+  .paragraph-container p {
+    margin: 0; /* Remove default margin */
+    color:white
+  }
+  
+  .paragraph-container .p1 {
+    font-size: 25px;
+    font-weight: bold; /* Increase boldness */
+  }
+  .paragraph-container .p2 {
+    font-size: 25px;
+    font-weight: bold; /* Increase boldness */
+  }
+  
+  .paragraph-container .p3 {
+    font-size: 18px;
+    font-weight: bold; /* Increase boldness */
+  }
+  

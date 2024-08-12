@@ -1,0 +1,18 @@
+
+<body>
+    <div class="main-container">
+      
+      <div class="content">
+        <p class="hp1"><i class="fa-solid fa-earth-americas" style="margin-right: 6px;"></i>TravelBees</p>
+        <select [(ngModel)]="selectedLocation" class="custom-dropdown">
+          <option value="" disabled selected>Search a location ...</option>
+          <option *ngFor="let location of locations" [value]="location">{{ location }}</option>
+        </select>
+        <button (click)="onSubmit()" class="custom-button">Submit</button>
+        <p class="hp2">Enchanting experiences,<br> with<i style="color: rgb(207, 9, 128);"> incredible locals</i></p>
+        <p class="hp3">Book unique and memorable travel <br> experiences guided by locals</p>
+      </div>
+      <img src="assets/hd-travel.png" alt="TravelBees Logo" class="logo">
+    </div>
+  </body>
+  

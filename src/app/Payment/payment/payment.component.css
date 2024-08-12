@@ -1,0 +1,37 @@
+
+.container{
+    padding-top: 50px;
+}
+.pink{
+    margin-top: 20px;
+    /* padding: 100px; */
+    margin-left: 500px;
+    color: #f6f3f5;
+    background-color: rgb(241, 13, 123);
+    border-radius: 40px;
+    font-size: 40px;
+}
+
+.lp1{
+    font-size: 20px;
+ font-weight: bold;
+}
+
+.lp2{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.card-header{
+    background-color:rgb(219, 9, 124) ;
+
+}
+.h2p{
+    margin-top:30px ;
+    margin-left: 500px;
+}
+
+.py{
+    font-size: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,64 @@
+<div classs="main-cont">
+   <div class="tour-details-container">
+    <div class="tour-details" *ngIf="booking">
+      <div class="tour-details-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="tour-photo">
+              <img *ngIf="booking.tour.tourPhoto" [src]="booking.tour.tourPhoto" alt="Tour Photo">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="tour-details-info">
+              <p class="p5"><strong><i class="fa-solid fa-person-walking-luggage" style="margin-right: 5px; margin-left: 20px;"></i>Your Tour Details</strong></p>
+
+              <p class="p1"><strong>Tour Name:</strong> {{ booking.tour.name }}</p>
+              <p class="p2"><strong>Price:</strong><i class="fa-solid fa-indian-rupee-sign" style="margin-right: 2px; margin-left: 20px;"></i> {{ booking.tour.price }}</p>
+              <p class="p3"><strong>Duration:</strong><i class="fa-solid fa-hourglass-half"style="margin-right: 2px; margin-left: 20px;"></i> {{ booking.tour.duration }} Day</p>
+              <p class="p4"><strong>Description:</strong> {{ booking.tour.description }}</p>
+              <p class="bp1"><strong>Booking Date:</strong><i class="fa-solid fa-calendar-days" style="margin-right: 2px; margin-left: 20px;"></i> {{ booking.bookingDate }}</p>
+              <p class="bp2"><strong>Number of Persons:</strong><i class="fa-solid fa-users" style="margin-right: 6px; margin-left: 20px;"></i> {{ booking.numberOfPersons }}</p>
+                <button class="bp3" (click)="navigateToPayment()">Payment</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- -------------------extras------------------------------ -->
+  <div class="pink-line">
+    <div class="row">
+      <div class="column">
+        <div class="paragraph-container">
+          <p class="p1"><i class="fa-solid fa-star" style="margin-right: 6px; "></i>Excellent Trustpilot score</p>
+          <p>With more than 190,429 traveler reviews,<br>
+             you can get the full picture before you go.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="paragraph-container">
+          <p class="p2"><i class="fa-solid fa-money-bill" style="margin-right: 6px; "></i>Exceptional flexibility</p>
+          <p class="p3">You're in control with free cancellation <br>
+            and lowest price guarantee to satisfy any plan or budget.</p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="paragraph-container">
+          <p class="p2"><i class="fa-solid fa-circle-user" style="margin-right: 6px;"></i>24/7 global support</p>
+          <p class="p3">Our award-winning customer service team <br>
+            is here to help, around the clock.</p>
+        </div>
+      </div>
+    
+    <div class="column">
+      
+      <div class="paragraph-container">
+        <p class="p2" ><i  class="fa-solid fa-phone" style="margin-right: 6px; margin-left: 20px;"></i>+(702) 648-5873</p>
+        <p class="p3"><i class="fas fa-comments" style="margin-right: 6px; margin-left: 20px;"></i>chatNow<br>
+       
+    </div>
+    </div>
+  </div>
+    
+  </div>
+</div>

@@ -1,0 +1,35 @@
+
+<div class="main-container">
+    <div class="container">
+     <div class="box">
+       <div class="form">
+         <form (submit)="login()">
+           <p class="hp1"><i class="fa-solid fa-earth-americas"style="margin-right: 6px; margin-left: 20px;"></i>TravelBees</p>
+          <p class="hp2">Welcome back</p>
+          <p class="hp3">Log in to your account</p>
+          <p class="hp4">Login in with your email address</p>
+          
+          <div>
+            <input  type="text" id="username" name="username" [(ngModel)]="user.username"  placeholder="username">
+          </div>
+           <div>   
+             <input type="password" id="password" name="password" [(ngModel)]="user.password" placeholder="Password">
+           </div>
+               
+           <!-- <p><i style="color: rgb(219, 8, 141);"> Forgor-your-password?</i ></p> -->
+            <p>
+              <span style="color: rgb(219, 8, 141); cursor: pointer;" (click)="navigateToRegister()">Forgot your password?</span>
+            </p>
+          <button type="submit">Log-in</button>
+           <!-- <p class="p2">No account? <i style="color: rgb(219, 8, 141);">Signup</i></p> -->
+          <p class="p2">No account? 
+            <span style="color: rgb(219, 8, 141); cursor: pointer;" (click)="navigateToSignUp()">Sign-Up</span>
+          </p>
+        </form>
+      </div>
+      <div class="image">
+        <img src="assets/Screenshot 2024-03-31 142018.png" alt="Image">
+      </div>
+    </div>
+  </div>
+</div>

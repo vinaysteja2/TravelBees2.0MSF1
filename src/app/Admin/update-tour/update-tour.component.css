@@ -1,0 +1,29 @@
+.container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: blanchedalmond;
+  margin-top: 90px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.error {
+  color: red;
+}
+
+.preview-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.custom-btn-update {
+  background-color: #ff69b4; 
+  border-color: #ff69b4;
+  color: white;
+}

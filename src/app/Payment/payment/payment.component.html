@@ -1,0 +1,37 @@
+<div class="container">
+    <h2 class="h2p">Make Payment</h2>
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Booking Summary</h5>
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="bookingId">Booking ID:</label>
+          <input id="bookingId" class="form-control" [(ngModel)]="bookingId" name="bookingId" readonly>
+        </div>
+        <div class="form-group">
+          <label for="totalPrice" class="lp1">Total Price:</label>
+          <input id="totalPrice" class="form-control" [(ngModel)]="price" name="totalPrice" readonly>
+        </div>
+        <div class="form-group">
+          <label for="totalNoOfPersons" class="lp2">Total Number of Persons:</label>
+          <input id="totalNoOfPersons" class="form-control" [(ngModel)]="totalNoOfPersons" name="totalNoOfPersons" readonly>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  
+    <!-- <form (ngSubmit)="addPayment()"> -->
+      <form (ngSubmit)="payNow1()">
+      <div class="form-group">
+        <label for="paymentMode" class="py">Payment Mode:</label>
+        <select id="paymentMode" class="form-control" [(ngModel)]="payment.paymentMode" name="paymentMode" required>
+          <option *ngFor="let mode of paymentModes" [value]="mode">{{ mode }}</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="pink">Submit Payment</button>
+    </form>
+  </div>
+  

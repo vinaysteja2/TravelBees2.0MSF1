@@ -1,0 +1,55 @@
+
+<div class="main-cont">
+
+   <div class="booking-history">
+    <h2>Your Booking History</h2>
+    <div *ngIf="bookings && bookings.length; else noBookings">
+      <table>
+        <thead>
+          <tr>
+            <th>Booking Date</th>
+            <th>Tour ID</th>
+            <th>Number of Persons</th>
+            <th>Booking Status</th>
+            <th>BPstate</th>
+            <th>Payment Status</th>
+            <th>Tour Details</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let booking of bookings">
+            <td>{{ booking.bookingDate | date: 'mediumDate' }}</td>
+            <td>{{ booking.tourId }}</td>
+            <td>{{ booking.numberOfPersons }}</td>
+            <td>{{ booking.bookingStatus}}</td>
+            <td>
+              <button *ngIf="isCancellable(booking.bookingStatus, booking.bookingDate)"
+                      (click)="cancelBooking(booking.id)"
+                      [ngClass]="{'btn-disabled': !booking.paymentStatus, 'cancel-btn': booking.paymentStatus}">
+                {{ isFutureOrCurrentDate(booking.bookingDate) ? 'Cancel Booking' : 'Completed' }}
+              </button>
+              <button *ngIf="!isCancellable(booking.bookingStatus, booking.bookingDate)" class="btn-disabled">
+                Cancelled
+              </button>
+            </td>
+            <td>
+              <button [ngClass]="{'btn-success': booking.paymentStatus, 'btn-danger': !booking.paymentStatus}"
+                      class="payment-status-btn"
+                      (click)="handlePaymentStatus(booking)"
+                      [disabled]="!isPaymentStatusEnabled(booking.bookingStatus)">
+                {{ booking.paymentStatus ? 'Successful' : 'Pending' }}
+              </button>
+            </td>
+            <td>
+              <button (click)="viewDetails(booking.id)" class="details-btn">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ng-template #noBookings>
+      <p>No bookings found.</p>
+    </ng-template>
+  </div>
+</div>

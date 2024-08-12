@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    user-select: none; 
+    caret-color: transparent; 
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+   
+}
+
+input,textarea {
+    opacity: 1; /* Ensure opacity is normal (not transparent) */
+    user-select: auto; /* Enable text selection */
+    caret-color: auto; /* Show the caret (text cursor) */
+    -webkit-user-select: text; /* For older versions of Safari */
+    -moz-user-select: text; /* For older versions of Firefox */
+    -ms-user-select: text; /* For older versions of Internet Explorer/Edge */
+}

@@ -1,0 +1,17 @@
+<p>tour-review works!</p>
+<div>
+    <h2>Add Review to Tour</h2>
+    <form (submit)="addReview()">
+      <div>
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment" [(ngModel)]="review.comment" required></textarea>
+      </div>
+      <div>
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" [(ngModel)]="review.rating" min="1" max="5" required>
+      </div>
+      <button type="submit">Submit Review</button>
+    </form>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  </div>
+  

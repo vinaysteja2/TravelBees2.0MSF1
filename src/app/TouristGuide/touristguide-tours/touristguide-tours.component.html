@@ -1,0 +1,74 @@
+<div class="main-cont">
+<div class="main-container">
+
+    <div class="tourist-guide-container">
+        
+        <div class="image-details-box">
+            <p class="p1">Hi there! Nice to meet you</p>
+            <div class="image-container">
+                
+                <img *ngIf="touristGuide?.photo" [src]="touristGuide?.photo" alt="Tourist Guide Photo" class="photo">
+
+            </div>
+            <div class="details-container">
+                <p class="namaste">Namaste I'm {{ touristGuide.name }}, The Memory Maker</p>
+                <div *ngIf="touristGuide">
+                    
+                    <p class="hp10"><strong>Name:</strong> {{ touristGuide.name }}</p>
+                    <p class="hp10"><strong>I Live in </strong> {{ touristGuide.location }}</p>
+                    <p class="hp10"><strong>I speak: </strong>{{ touristGuide?.languages?.join(', ') }}</p>
+                    <p class="hp10"><strong>Email:</strong> {{ touristGuide.email }}</p>
+                    <p class="hp10"><strong>Average Rating:</strong> {{ touristGuide.averageRating }}</p>
+                    <p class="hp10"><strong>Contact Number:</strong> {{ touristGuide.contactNumber }}</p>
+                <div>
+                <hr class="black-line1"> 
+              </div>
+                    <p class ="aboutme">About me</p>
+                    <p class="hp10">{{ touristGuide.description }}</p>
+                   
+                </div>
+                <div *ngIf="!touristGuide">
+                    <p>No tourist guide data available.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -----------------------tour--------------------- -->
+
+<div class="tour-matrix">
+    <p class="extra1">Book one of my offers</p>
+    <p class="extra2">Lets explore world together! As your local guide!. I will show you best of my city on a private &
+        personalized tour for you and your family.  </p>
+    <div *ngIf="touristGuide && touristGuide.tour" class="tour-box-container">
+        
+        <div *ngFor="let tour of touristGuide.tour" class="tour-box">
+            <div class="tour-content">
+                <img *ngIf="tour.tourPhoto" [src]="tour.tourPhoto" alt="Tour Photo" class="photo">
+                <div class="tour-details">
+                    
+                    <p class="name">{{ tour.name }}</p>
+                    <p class="description">{{ tour.smallDescription }}</p>
+                    <p class="rating">Average Rating: {{ tour.averageRating }}</p>
+                </div>
+            <!-- <div class="t1"> -->
+            <button  (click)="getTourDetails(tour.id)">Tour Details</button>
+        <!-- </div> -->
+        </div>
+    </div>
+    <div *ngIf="!touristGuide || !touristGuide.tour">
+        <p>No tour information available.</p>
+    </div>
+</div>
+<div class="text-box">
+    <div class="tb1">
+<h2 class="tp1">Reasons to book this TouristGuide</h2>
+<p class="tp2"><i class="fa-solid fa-check" style="margin-right: 10px; margin-left: 10px; "></i>Explore the best of the city only in one day.</p>
+<p class="tp3"><i class="fa-solid fa-check" style="margin-right: 10px; margin-left: 10px; "></i>Disscover hidden gems away from the tourist paths.</p>
+<p class="tp4"><i class="fa-solid fa-check" style="margin-right: 10px; margin-left: 10px; "></i>Experience the city from a locals perspective.</p>
+<p class="tp5"><i class="fa-solid fa-check" style="margin-right: 10px; margin-left: 10px; "></i>Privately guided by a local expert.</p>
+<p class="tp6"><i class="fa-solid fa-check" style="margin-right: 10px; margin-left: 10px; "></i>Can be 100% personalized to your wishes.</p>
+</div>
+  </div>
+</div>
+
+</div>

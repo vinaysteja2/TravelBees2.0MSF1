@@ -1,0 +1,25 @@
+<!-- ---------------------------pdf generation-------------- -->
+<!-- <p>pdf-generation works!</p>
+
+<div>
+    <button (click)="generatePDF()">Generate pdf</button>
+</div> -->
+
+
+<!-- --------------------------------------------------------------- -->
+<!-- user-profile.component.html -->
+<div class="profile-box" *ngIf="isVisible">
+    <div class="header">
+      <h2>User Profile</h2>
+      <button mat-icon-button (click)="closeProfile()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <div class="content">
+      <p><strong>Username:</strong> {{ user?.username }}</p>
+      <p><strong>Email:</strong> {{ user?.email }}</p>
+      <p><strong>Mobile Number:</strong> {{ user?.mobileNo }}</p>
+      <!-- Add more user details as needed -->
+    </div>
+  </div>
+  

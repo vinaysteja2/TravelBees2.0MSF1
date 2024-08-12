@@ -1,0 +1,50 @@
+<!-- 
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let tour of tours">
+      <div class="card mb-3">
+        <img *ngIf="tour.tourPhoto" [src]="tour.tourPhoto" alt="Tour Photo" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ tour.name }}</h5>
+          <p class="card-text"><strong>Id:</strong> {{ tour.id }}</p>
+          <p class="card-text"><strong>Description:</strong> {{ tour.description }}</p>
+          <p class="card-text"><strong>Price:</strong> {{ tour.price }}</p>
+          <p class="card-text"><strong>Duration:</strong> {{ tour.duration }}</p>
+          <p class="card-text"><strong>smallDescription:</strong> {{ tour.smallDescription }}</p>
+          <p class="card-text"><strong>AverageRating:</strong> {{ tour.averageRating }}</p>
+          <div class="button-container">
+          <button type="button" class="btn custom-btn custom-btn-update" (click)="tour.id !== undefined && navigateToUpdate(tour.id)">UPDATE</button>
+          <button type="button" class="btn custom-btn custom-btn-delete" (click)="tour.id !== undefined && deleteTouristGuide(tour.id)">DELETE</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let tour of pagedTours">
+      <div class="card mb-3">
+        <img *ngIf="tour.tourPhoto" [src]="tour.tourPhoto" alt="Tour Photo" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">{{ tour.name }}</h5>
+          <p class="card-text"><strong>Id:</strong> {{ tour.id }}</p>
+          <p class="card-text"><strong>Description:</strong> {{ tour.description }}</p>
+          <p class="card-text"><strong>Price:</strong> {{ tour.price }}</p>
+          <p class="card-text"><strong>Duration:</strong> {{ tour.duration }}</p>
+          <p class="card-text"><strong>Small Description:</strong> {{ tour.smallDescription }}</p>
+          <p class="card-text"><strong>Average Rating:</strong> {{ tour.averageRating }}</p>
+          <div class="button-container">
+            <button type="button" class="btn custom-btn custom-btn-update" (click)="tour.id !== undefined && navigateToUpdate(tour.id)">UPDATE</button>
+            <button type="button" class="btn custom-btn custom-btn-delete" (click)="tour.id !== undefined && deleteTouristGuide(tour.id)">DELETE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Pagination controls -->
+  <div class="pagination">
+    <button *ngFor="let page of totalPagesArray; let i = index" (click)="setPage(i)" [class.active]="i === currentPage">{{ i + 1 }}</button>
+  </div>
+</div>
